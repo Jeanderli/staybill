@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+
+<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;family=Manrope:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "on-primary-fixed-variant": "#484644",
+          "secondary": "#755a34",
+          "secondary-hover": "#634c2a",
+          "surface-bright": "#fbf9f6",
+          "surface-variant": "#e4e2df",
+          "on-secondary": "#ffffff",
+          "on-primary-fixed": "#1c1b19",
+          "on-surface-variant": "#494740",
+          "inverse-primary": "#cac6c2",
+          "secondary-fixed": "#ffddb3",
+          "on-tertiary-container": "#89837a",
+          "on-secondary-fixed-variant": "#5b421f",
+          "tertiary-container": "#1e1b15",
+          "error-container": "#ffdad6",
+          "surface-container-low": "#f5f3f0",
+          "primary-container": "#1c1b19",
+          "tertiary": "#000000",
+          "on-secondary-fixed": "#291800",
+          "tertiary-fixed-dim": "#ccc6bb",
+          "on-error-container": "#93000a",
+          "on-error": "#ffffff",
+          "surface-dim": "#dbdad7",
+          "surface-tint": "#605e5b",
+          "on-tertiary": "#ffffff",
+          "outline-variant": "#eae5dc",
+          "surface-container-high": "#eae8e5",
+          "inverse-on-surface": "#f2f0ed",
+          "surface-container": "#efeeeb",
+          "on-tertiary-fixed-variant": "#4a463e",
+          "on-secondary-container": "#7a5e38",
+          "error": "#ba1a1a",
+          "background": "#fbf9f6",
+          "on-surface": "#191816",
+          "inverse-surface": "#30312f",
+          "outline": "#7a776f",
+          "primary": "#191816",
+          "surface-container-lowest": "#ffffff",
+          "tertiary-fixed": "#e9e1d6",
+          "surface-container-highest": "#e4e2df",
+          "on-primary-container": "#868380",
+          "on-primary": "#ffffff",
+          "primary-fixed": "#e6e2de",
+          "on-background": "#191816",
+          "primary-fixed-dim": "#cac6c2",
+          "on-tertiary-fixed": "#1e1b15",
+          "secondary-fixed-dim": "#e5c193",
+          "surface": "#fbf9f6",
+          "secondary-container": "#ffdaab",
+          "obsidian": "#191816",
+          "warm-slate": "#5A554E",
+          "sage-status": "#3B6E52",
+          "sage-status-bg": "#edf5f0",
+          "champagne": "#c5a880"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.125rem",
+          "lg": "0.25rem",
+          "xl": "0.5rem",
+          "full": "0.75rem"
+        },
+        "spacing": {
+          "space-sm": "0.5rem",
+          "space-md": "1rem",
+          "margin-mobile": "1.25rem",
+          "space-xs": "0.25rem",
+          "margin": "3rem",
+          "gutter-mobile": "0.75rem",
+          "space-xl": "2.5rem",
+          "space-lg": "1.75rem",
+          "gutter": "1.5rem"
+        },
+        "fontFamily": {
+          "body-sm": ["Manrope", "sans-serif"],
+          "numeric-lg": ["Manrope", "sans-serif"],
+          "headline-lg": ["Playfair Display", "serif"],
+          "label-sm": ["Manrope", "sans-serif"],
+          "headline-md": ["Playfair Display", "serif"],
+          "body-md": ["Manrope", "sans-serif"],
+          "display-lg": ["Playfair Display", "serif"],
+          "numeric-md": ["Manrope", "sans-serif"],
+          "display-lg-mobile": ["Playfair Display", "serif"],
+          "headline-sm": ["Manrope", "sans-serif"],
+          "body-lg": ["Manrope", "sans-serif"],
+          "label-caps": ["Manrope", "sans-serif"],
+          "headline-lg-mobile": ["Playfair Display", "serif"]
+        },
+        "fontSize": {
+          "body-sm": ["12px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "400" }],
+          "numeric-lg": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "500" }],
+          "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.015em", "fontWeight": "500" }],
+          "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500" }],
+          "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "500" }],
+          "body-md": ["14px", { "lineHeight": "22px", "letterSpacing": "0.005em", "fontWeight": "400" }],
+          "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "400" }],
+          "numeric-md": ["15px", { "lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "600" }],
+          "display-lg-mobile": ["34px", { "lineHeight": "42px", "letterSpacing": "-0.01em", "fontWeight": "400" }],
+          "headline-sm": ["18px", { "lineHeight": "26px", "letterSpacing": "0.01em", "fontWeight": "600" }],
+          "body-lg": ["16px", { "lineHeight": "26px", "letterSpacing": "0", "fontWeight": "400" }],
+          "label-caps": ["11px", { "lineHeight": "16px", "letterSpacing": "0.14em", "fontWeight": "700" }],
+          "headline-lg-mobile": ["26px", { "lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "500" }]
+        }
+      }
+    }
+  };</script></head><body class="bg-background font-body-md text-body-md text-on-surface antialiased selection:bg-secondary-fixed selection:text-obsidian"><aside class="fixed left-0 top-0 h-screen w-72 bg-surface-container-lowest border-r border-outline-variant/60 shadow-[0_1px_8px_rgba(0,0,0,0.02)] z-50 flex flex-col justify-between overflow-y-auto"><div class="flex flex-col"><div class="h-16 px-space-md flex items-center gap-space-sm bg-surface-container-lowest border-b border-outline-variant/50"><img alt="AQELION Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WoU-2l5HI1HGuZzFxlRUgwFSNEFcxZu3JVQC-8GvoTQ6RJkWYGivSdlWfyOPmDnLj_6k1PEvwqu7q4EXsTbtfSda2zbB2VapZ29Xmt5P7UnjO-PFjGfzdSvQgq9WGXu4wucfSLb5LVmap7CAb6CCtnHfVZsoRt-EJ2FcYh4Ozb-jCFMRrKdQ0c2TI5mRCXOtUqntJ8JaWdHa_itQxrg8j72RgkxYZfgP8yaAcS8LeoprUtess3wVxriyHg"/><div class="flex flex-col"><span class="font-headline-sm text-[17px] font-semibold text-obsidian tracking-tight leading-none">AQELION</span><span class="font-label-caps text-[10px] text-warm-slate uppercase tracking-widest mt-1">Hostelería &amp; Facturación</span></div></div><div class="px-space-md pt-space-md"><span class="px-space-sm font-label-caps text-[10px] text-warm-slate uppercase tracking-wider block mb-space-xs">Principal</span><nav class="flex flex-col gap-1" data-active-classes="bg-primary-container text-on-primary font-body-md text-body-md rounded-lg"><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-warm-slate hover:bg-surface-container hover:text-obsidian transition-colors font-body-md text-body-md" data-path="panel-de-control" href="#"><span class="material-symbols-outlined text-lg leading-none">dashboard</span><span>Panel de Control</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg bg-obsidian text-on-primary font-body-md text-body-md shadow-sm" data-path="facturacion-y-comprobantes" href="#"><span class="material-symbols-outlined text-lg leading-none">receipt_long</span><span>Facturación &amp; Comprobantes</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-warm-slate hover:bg-surface-container hover:text-obsidian transition-colors font-body-md text-body-md" data-path="huespedes-y-cuentas" href="#"><span class="material-symbols-outlined text-lg leading-none">badge</span><span>Huéspedes &amp; Cuentas</span></a></nav></div><div class="px-space-md pt-space-lg"><span class="px-space-sm font-label-caps text-[10px] text-warm-slate uppercase tracking-wider block mb-space-xs">Gestión</span><nav class="flex flex-col gap-1" data-active-classes="bg-primary-container text-on-primary font-body-md text-body-md rounded-lg"><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-warm-slate hover:bg-surface-container hover:text-obsidian transition-colors font-body-md text-body-md" data-path="habitaciones-y-tarifas" href="#"><span class="material-symbols-outlined text-lg leading-none">hotel</span><span>Habitaciones &amp; Tarifas</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-warm-slate hover:bg-surface-container hover:text-obsidian transition-colors font-body-md text-body-md" data-path="reportes-fiscales" href="#"><span class="material-symbols-outlined text-lg leading-none">account_balance</span><span>Reportes Fiscales</span></a></nav></div><div class="px-space-md pt-space-lg"><span class="px-space-sm font-label-caps text-[10px] text-warm-slate uppercase tracking-wider block mb-space-xs">Sistema</span><nav class="flex flex-col gap-1" data-active-classes="bg-primary-container text-on-primary font-body-md text-body-md rounded-lg"><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-warm-slate hover:bg-surface-container hover:text-obsidian transition-colors font-body-md text-body-md" data-path="configuracion" href="#"><span class="material-symbols-outlined text-lg leading-none">settings</span><span>Configuración</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-warm-slate hover:bg-surface-container hover:text-obsidian transition-colors font-body-md text-body-md" data-path="mi-perfil" href="#"><span class="material-symbols-outlined text-lg leading-none">person</span><span>Mi Perfil</span></a></nav></div></div><div class="p-space-md flex flex-col gap-space-sm bg-surface-container-low/60 border-t border-outline-variant/60"><div class="flex items-center justify-between px-space-sm py-space-xs rounded-lg bg-surface-container-lowest border border-outline-variant/60"><div class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-sage-status animate-pulse"></span><span class="font-label-sm text-label-sm text-obsidian">API Facturación</span></div><span class="font-label-sm text-label-sm text-sage-status font-medium">En línea</span></div><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-error hover:bg-error-container hover:text-on-error-container transition-colors font-body-md text-body-md" data-path="cerrar-sesion" href="#"><span class="material-symbols-outlined text-lg leading-none">logout</span><span>Cerrar sesión</span></a></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface-container-lowest/90 backdrop-blur-xl border-b border-outline-variant/60 z-40 flex items-center justify-between px-space-lg"><div class="flex items-center gap-space-md flex-1 max-w-lg"><div class="relative w-full flex items-center"><span class="material-symbols-outlined absolute left-3 text-warm-slate text-lg pointer-events-none">search</span><input class="w-full h-10 pl-10 pr-12 rounded-lg bg-surface-container-low text-obsidian placeholder:text-outline/70 font-body-sm text-body-sm border border-transparent focus:border-outline-variant focus:outline-none focus:bg-surface-container-lowest focus:ring-1 focus:ring-secondary transition-all" placeholder="Buscar factura, habitación o huésped..." type="text"/><kbd class="absolute right-3 px-1.5 py-0.5 rounded bg-surface-container text-warm-slate font-mono text-[10px]">⌘K</kbd></div></div><div class="flex items-center gap-space-md"><button class="flex items-center gap-space-xs h-10 px-space-md bg-obsidian text-on-primary rounded-lg font-body-md text-body-md hover:bg-obsidian/90 transition-colors shadow-sm" type="button"><span class="material-symbols-outlined text-lg leading-none">add</span><span>Nueva Factura</span></button><button aria-label="Notificaciones" class="relative p-2 rounded-lg text-warm-slate hover:bg-surface-container hover:text-obsidian transition-colors" type="button"><span class="material-symbols-outlined text-xl leading-none">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-secondary"></span></button><div class="flex items-center gap-space-sm pl-space-xs"><div class="text-right hidden xl:block"><div class="font-body-md text-[13px] font-semibold text-obsidian leading-tight">Alejandro Morales</div><div class="font-label-sm text-[11px] text-warm-slate leading-tight">Administrador Hotelero</div></div><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-1 ring-outline-variant" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCf8b4vXFP7ACcPHwtPosuYHsWXxvyIVwVtnD-fSO-q6He_MisaDyYwQxxyGaUGQe-j3kwftk029H1isKSsRarUpINV5L-j_3V9p0nTAlwzSaWXDUqbw3gEIHDxRgCnXQ6yCXvICvjv6iHZHx_-ZWX2RoUbDfxIapzuxHmgEnB8up_pESWXZtq3xWTJy-RB-L4RMyojevelWAj4fGRmbNSxQ482GD0-SY8927LlgO8Pypd_vtPa-ZoQ_Q"/></div></div></header><main class="w-full pt-16 bg-background px-space-lg min-h-screen"><div class="flex flex-col w-full">
+<!-- Interactive & Print Media CSS Styles -->
+<style>
+    @media print {
+      body * {
+        visibility: hidden;
+      }
+      #print-area, #print-area * {
+        visibility: visible;
+      }
+      #print-area {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        box-shadow: none !important;
+        background: #ffffff !important;
+        border: none !important;
+      }
+      .no-print {
+        display: none !important;
+      }
+    }
+  </style>
+<!-- Top Action & Breadcrumb Sticky Bar -->
+<div class="no-print w-full bg-surface-container-lowest border border-outline-variant/60 shadow-[0_2px_12px_rgba(25,24,22,0.03)] px-space-lg py-3 flex flex-col md:flex-row md:items-center justify-between gap-space-md mb-space-lg rounded-xl mt-4">
+<!-- Breadcrumb & Status -->
+<div class="flex flex-wrap items-center gap-space-sm">
+<a class="inline-flex items-center gap-1.5 font-body-md text-[13px] text-warm-slate hover:text-obsidian transition-colors" href="#">
+<span class="material-symbols-outlined text-base">arrow_back</span>
+<span>Volver a Facturación</span>
+</a>
+<span class="text-outline-variant font-body-md">/</span>
+<span class="font-headline-sm text-[17px] font-semibold text-obsidian tracking-tight">FAC-2024-10492</span>
+<div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-sage-status-bg text-sage-status border border-sage-status/20">
+<span class="w-1.5 h-1.5 rounded-full bg-sage-status animate-pulse"></span>
+<span class="font-label-caps text-[10px] uppercase tracking-wider font-semibold">Veri*Factu / SII Válido</span>
+</div>
+<span class="inline-flex items-center px-2 py-0.5 rounded bg-surface-container text-warm-slate border border-outline-variant/60 font-body-sm text-[11px] font-medium">
+        Original v1.2
+      </span>
+</div>
+<!-- Direct Action Controls -->
+<div class="flex items-center gap-2.5 flex-wrap">
+<button class="inline-flex items-center gap-1.5 h-9 px-3.5 rounded-lg border border-outline-variant bg-surface-container-lowest hover:bg-surface-container-low text-obsidian font-body-md text-body-md transition-colors cursor-pointer" onclick="window.print()">
+<span class="material-symbols-outlined text-base text-warm-slate">print</span>
+<span>Imprimir Factura</span>
+</button>
+<button class="inline-flex items-center gap-1.5 h-9 px-4 rounded-lg bg-obsidian hover:bg-obsidian/90 text-on-primary font-body-md text-body-md transition-colors shadow-sm cursor-pointer" id="downloadPdfBtn">
+<span class="material-symbols-outlined text-base text-champagne">picture_as_pdf</span>
+<span>Descargar PDF</span>
+</button>
+<div class="relative inline-block text-left" id="moreActionsDropdown">
+<button class="inline-flex items-center gap-1 h-9 px-3 rounded-lg border border-outline-variant/70 bg-surface-container-low hover:bg-surface-container text-obsidian font-body-md text-body-md transition-colors cursor-pointer" id="dropdownToggleBtn">
+<span class="material-symbols-outlined text-base text-warm-slate">more_horiz</span>
+<span class="hidden sm:inline">Opciones</span>
+</button>
+<div class="hidden absolute right-0 mt-2 w-56 rounded-xl bg-surface-container-lowest border border-outline-variant shadow-lg z-50 py-1.5 transition-all" id="dropdownMenu">
+<a class="flex items-center gap-2.5 px-4 py-2 font-body-md text-body-md text-obsidian hover:bg-surface-container-low" href="#">
+<span class="material-symbols-outlined text-base text-secondary">mail</span>
+<span>Enviar por Email</span>
+</a>
+<a class="flex items-center gap-2.5 px-4 py-2 font-body-md text-body-md text-obsidian hover:bg-surface-container-low" href="#">
+<span class="material-symbols-outlined text-base text-warm-slate">code</span>
+<span>Descargar XML / Facturae</span>
+</a>
+<a class="flex items-center gap-2.5 px-4 py-2 font-body-md text-body-md text-obsidian hover:bg-surface-container-low" href="#">
+<span class="material-symbols-outlined text-base text-warm-slate">qr_code_2</span>
+<span>Ficha Técnica Veri*Factu</span>
+</a>
+<div class="my-1 border-t border-outline-variant"></div>
+<a class="flex items-center gap-2.5 px-4 py-2 font-body-md text-body-md text-error hover:bg-error-container hover:text-on-error-container" href="#">
+<span class="material-symbols-outlined text-base">restart_alt</span>
+<span>Generar Nota de Crédito</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<!-- Workspace Grid (Document Canvas + Audit Sidebar) -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-space-lg items-start pb-space-xl">
+<!-- A4 Document Canvas Wrapper (8 Cols Desktop) -->
+<div class="xl:col-span-8 flex justify-center w-full">
+<div class="w-full max-w-[850px] bg-surface-container-lowest border border-outline-variant shadow-[0_4px_24px_rgba(25,24,22,0.04)] rounded-lg p-6 sm:p-10 md:p-12 text-on-surface" id="print-area">
+<!-- Document Top Branding & Fiscal Header -->
+<div class="flex flex-col md:flex-row justify-between items-start gap-6 pb-6 border-b border-outline-variant">
+<!-- Hotel Issuer Identity -->
+<div class="space-y-2">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-obsidian text-champagne flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-2xl">hotel_class</span>
+</div>
+<div>
+<span class="font-headline-lg text-[22px] tracking-tight text-obsidian block leading-tight">AQELION GRAND MIRAMAR</span>
+<span class="font-label-caps text-[10px] uppercase tracking-widest text-secondary block mt-0.5">Luxury Resort &amp; Thalasso Palace</span>
+</div>
+</div>
+<div class="pt-2 text-warm-slate font-body-sm text-body-sm leading-relaxed space-y-0.5">
+<p class="font-semibold text-obsidian">AQELION HOSPITALITY SUITES S.L.</p>
+<p>NIF/CIF: <span class="font-medium text-obsidian">B-84920194</span> · Reg. Turístico: H-MA-01429</p>
+<p>Paseo Marítimo Pablo Picasso, 142 · 29016 Málaga (España)</p>
+<p>Tel: +34 951 882 000 · Email: billing@aqelion-miramar.com</p>
+<p class="text-[11px] text-warm-slate/80">Reg. Mercantil de Málaga, Tomo 4.819, Folio 112, Hoja MA-99120</p>
+</div>
+</div>
+<!-- Document Voucher Box -->
+<div class="w-full md:w-auto bg-surface-container-low/70 border border-outline-variant/80 rounded-xl p-4 sm:p-5 flex flex-col gap-2 min-w-[270px]">
+<div class="flex items-center justify-between gap-2 border-b border-outline-variant pb-2">
+<span class="font-label-caps text-[10px] uppercase tracking-widest text-warm-slate font-semibold">Comprobante Fiscal</span>
+<span class="px-2 py-0.5 rounded bg-sage-status-bg text-sage-status border border-sage-status/20 font-label-caps text-[10px] tracking-wider font-semibold">PAGADA</span>
+</div>
+<div>
+<span class="font-label-caps text-[10px] text-warm-slate uppercase tracking-wider block">Factura Ordinaria</span>
+<p class="font-headline-md text-headline-md text-obsidian tracking-tight leading-none mt-1">FAC-2024-10492</p>
+</div>
+<div class="grid grid-cols-2 gap-x-3 gap-y-1.5 pt-2 text-warm-slate font-body-sm text-body-sm">
+<div>
+<span class="font-body-sm text-[11px] block text-warm-slate/80">Fecha Emisión:</span>
+<span class="text-obsidian font-medium">24/10/2024 10:30</span>
+</div>
+<div>
+<span class="font-body-sm text-[11px] block text-warm-slate/80">Fecha Devengo:</span>
+<span class="text-obsidian font-medium">24/10/2024</span>
+</div>
+<div class="col-span-2 pt-1 border-t border-outline-variant/70">
+<span class="font-body-sm text-[11px] block text-warm-slate/80">Código Seguro Verificación (CSV):</span>
+<span class="font-mono text-[11px] text-obsidian">CSV-9948-AK82-10492-X</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Client Information & Reservation Context (Two Column Card) -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 py-6">
+<!-- Client Details -->
+<div class="bg-surface-container-low/40 border border-outline-variant/80 rounded-xl p-4 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between pb-2 mb-2 border-b border-outline-variant">
+<span class="font-label-caps text-[10px] uppercase tracking-wider text-secondary font-semibold">Facturar a (Cliente / Huésped)</span>
+<span class="material-symbols-outlined text-base text-secondary">corporate_fare</span>
+</div>
+<p class="font-headline-sm text-headline-sm text-obsidian leading-snug">Grand Travel Agency S.L.</p>
+<p class="font-body-sm text-body-sm text-warm-slate mt-0.5">Huésped principal: <strong class="text-obsidian font-medium">Elena Rostova</strong> &amp; Acompañante</p>
+<div class="mt-3 space-y-1 font-body-sm text-body-sm text-warm-slate">
+<p>NIF/CIF: <span class="text-obsidian font-medium">B-84920194</span> · DNI/Pas: 49201948-K</p>
+<p>Av. Diagonal 640, 6º Planta · 08017 Barcelona (España)</p>
+<p>Email: facturacion@grandtravel.com</p>
+</div>
+</div>
+<div class="mt-3 pt-2 border-t border-outline-variant flex items-center gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span class="text-[12px] text-warm-slate">Cuenta Comercial VIP Corporate Tier 1</span>
+</div>
+</div>
+<!-- Stay & Room Reservation Info -->
+<div class="bg-surface-container-low/40 border border-outline-variant/80 rounded-xl p-4 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between pb-2 mb-2 border-b border-outline-variant">
+<span class="font-label-caps text-[10px] uppercase tracking-wider text-secondary font-semibold">Detalles de Estancia &amp; PMS</span>
+<span class="material-symbols-outlined text-base text-secondary">meeting_room</span>
+</div>
+<div class="flex items-center justify-between">
+<div>
+<span class="text-[11px] text-warm-slate/80 uppercase font-label-caps">Alojamiento</span>
+<p class="font-headline-sm text-headline-sm text-obsidian">Suite Presidencial 402</p>
+<p class="text-[12px] text-warm-slate">Ocean Deluxe Wing · Cama King Size</p>
+</div>
+<div class="text-right">
+<span class="text-[11px] text-warm-slate/80 uppercase font-label-caps">Folio PMS</span>
+<p class="font-body-md text-body-md font-semibold text-secondary">#FOL-2024-0310</p>
+<p class="text-[12px] text-warm-slate">Res: RES-88491</p>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-2 mt-3 pt-2 border-t border-outline-variant text-warm-slate font-body-sm text-body-sm">
+<div>
+<span class="block text-[11px] text-warm-slate/80">Check-in:</span>
+<span class="text-obsidian font-medium">19 Oct 2024 (15:00)</span>
+</div>
+<div>
+<span class="block text-[11px] text-warm-slate/80">Check-out:</span>
+<span class="text-obsidian font-medium">24 Oct 2024 (10:00)</span>
+</div>
+</div>
+</div>
+<div class="mt-3 pt-2 border-t border-outline-variant flex items-center justify-between text-[12px] text-warm-slate">
+<span>Duración: <strong class="text-obsidian font-medium">5 Noches / 2 Huéspedes</strong></span>
+<span class="px-2 py-0.5 rounded bg-surface-container-high border border-outline-variant text-[11px] font-medium text-obsidian">Aloj. + Desayuno Buffet</span>
+</div>
+</div>
+</div>
+<!-- Breakdown Ledger Table -->
+<div class="mt-2 overflow-x-auto rounded-xl border border-outline-variant">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low text-warm-slate font-label-caps text-[10px] uppercase tracking-wider border-b border-outline-variant">
+<th class="py-3 px-3">Fecha</th>
+<th class="py-3 px-3">Concepto / Servicio Hotelero</th>
+<th class="py-3 px-2 text-center">Cant.</th>
+<th class="py-3 px-3 text-right">Precio Ud.</th>
+<th class="py-3 px-2 text-center">Dto.</th>
+<th class="py-3 px-3 text-right">Base Imp.</th>
+<th class="py-3 px-2 text-center">IVA</th>
+<th class="py-3 px-3 text-right">Subtotal</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant font-body-sm text-body-sm">
+<!-- Item 1: Alojamiento -->
+<tr class="hover:bg-surface-container-low/40 transition-colors">
+<td class="py-3.5 px-3 text-warm-slate whitespace-nowrap align-top">19-24 Oct</td>
+<td class="py-3.5 px-3 align-top">
+<span class="font-medium text-obsidian block text-[14px]">Alojamiento Suite Presidencial 402</span>
+<span class="text-warm-slate text-[12px]">Estancia 5 noches · Tarifa VIP Corporate contratada</span>
+</td>
+<td class="py-3.5 px-2 text-center align-top font-medium text-obsidian">5</td>
+<td class="py-3.5 px-3 text-right align-top font-mono text-[13px] text-obsidian">320,00 €</td>
+<td class="py-3.5 px-2 text-center align-top text-warm-slate">0%</td>
+<td class="py-3.5 px-3 text-right align-top font-mono text-[13px] text-obsidian">1.600,00 €</td>
+<td class="py-3.5 px-2 text-center align-top"><span class="px-1.5 py-0.5 rounded bg-surface-container text-obsidian font-mono text-[11px] font-medium border border-outline-variant/60">10%</span></td>
+<td class="py-3.5 px-3 text-right align-top font-medium text-obsidian font-mono text-[14px]">1.760,00 €</td>
+</tr>
+<!-- Item 2: Restauración -->
+<tr class="hover:bg-surface-container-low/40 transition-colors">
+<td class="py-3.5 px-3 text-warm-slate whitespace-nowrap align-top">20 Oct</td>
+<td class="py-3.5 px-3 align-top">
+<span class="font-medium text-obsidian block text-[14px]">Restaurante "L'Horizon" · Menú Degustación</span>
+<span class="text-warm-slate text-[12px]">Ticket POS Comanda #9412 · Cargo directo a folio</span>
+</td>
+<td class="py-3.5 px-2 text-center align-top font-medium text-obsidian">2</td>
+<td class="py-3.5 px-3 text-right align-top font-mono text-[13px] text-obsidian">65,00 €</td>
+<td class="py-3.5 px-2 text-center align-top text-warm-slate">0%</td>
+<td class="py-3.5 px-3 text-right align-top font-mono text-[13px] text-obsidian">130,00 €</td>
+<td class="py-3.5 px-2 text-center align-top"><span class="px-1.5 py-0.5 rounded bg-surface-container text-obsidian font-mono text-[11px] font-medium border border-outline-variant/60">10%</span></td>
+<td class="py-3.5 px-3 text-right align-top font-medium text-obsidian font-mono text-[14px]">143,00 €</td>
+</tr>
+<!-- Item 3: Spa -->
+<tr class="hover:bg-surface-container-low/40 transition-colors">
+<td class="py-3.5 px-3 text-warm-slate whitespace-nowrap align-top">21 Oct</td>
+<td class="py-3.5 px-3 align-top">
+<span class="font-medium text-obsidian block text-[14px]">Spa &amp; Wellness Circuit + Masaje Dúo</span>
+<span class="text-warm-slate text-[12px]">Tratamiento termal de hidroterapia 90 min</span>
+</td>
+<td class="py-3.5 px-2 text-center align-top font-medium text-obsidian">1</td>
+<td class="py-3.5 px-3 text-right align-top font-mono text-[13px] text-obsidian">120,00 €</td>
+<td class="py-3.5 px-2 text-center align-top text-warm-slate">0%</td>
+<td class="py-3.5 px-3 text-right align-top font-mono text-[13px] text-obsidian">120,00 €</td>
+<td class="py-3.5 px-2 text-center align-top"><span class="px-1.5 py-0.5 rounded bg-surface-container-high text-obsidian font-mono text-[11px] font-medium border border-outline-variant/60">21%</span></td>
+<td class="py-3.5 px-3 text-right align-top font-medium text-obsidian font-mono text-[14px]">145,20 €</td>
+</tr>
+<!-- Item 4: Minibar -->
+<tr class="hover:bg-surface-container-low/40 transition-colors">
+<td class="py-3.5 px-3 text-warm-slate whitespace-nowrap align-top">22 Oct</td>
+<td class="py-3.5 px-3 align-top">
+<span class="font-medium text-obsidian block text-[14px]">Minibar Premium Habitación 402</span>
+<span class="text-warm-slate text-[12px]">Botella Cava Brut Nature &amp; Frutos secos selección</span>
+</td>
+<td class="py-3.5 px-2 text-center align-top font-medium text-obsidian">1</td>
+<td class="py-3.5 px-3 text-right align-top font-mono text-[13px] text-obsidian">35,00 €</td>
+<td class="py-3.5 px-2 text-center align-top text-warm-slate">0%</td>
+<td class="py-3.5 px-3 text-right align-top font-mono text-[13px] text-obsidian">35,00 €</td>
+<td class="py-3.5 px-2 text-center align-top"><span class="px-1.5 py-0.5 rounded bg-surface-container-high text-obsidian font-mono text-[11px] font-medium border border-outline-variant/60">21%</span></td>
+<td class="py-3.5 px-3 text-right align-top font-medium text-obsidian font-mono text-[14px]">42,35 €</td>
+</tr>
+<!-- Item 5: Transfer -->
+<tr class="hover:bg-surface-container-low/40 transition-colors">
+<td class="py-3.5 px-3 text-warm-slate whitespace-nowrap align-top">23 Oct</td>
+<td class="py-3.5 px-3 align-top">
+<span class="font-medium text-obsidian block text-[14px]">Chauffeur Privado Aeropuerto AGP</span>
+<span class="text-warm-slate text-[12px]">Vehículo Mercedes Clase V ejecutivo · Trayecto ida</span>
+</td>
+<td class="py-3.5 px-2 text-center align-top font-medium text-obsidian">1</td>
+<td class="py-3.5 px-3 text-right align-top font-mono text-[13px] text-obsidian">75,00 €</td>
+<td class="py-3.5 px-2 text-center align-top text-warm-slate">0%</td>
+<td class="py-3.5 px-3 text-right align-top font-mono text-[13px] text-obsidian">75,00 €</td>
+<td class="py-3.5 px-2 text-center align-top"><span class="px-1.5 py-0.5 rounded bg-surface-container-high text-obsidian font-mono text-[11px] font-medium border border-outline-variant/60">21%</span></td>
+<td class="py-3.5 px-3 text-right align-top font-medium text-obsidian font-mono text-[14px]">90,75 €</td>
+</tr>
+<!-- Item 6: Tasa Turística -->
+<tr class="hover:bg-surface-container-low/40 transition-colors">
+<td class="py-3.5 px-3 text-warm-slate whitespace-nowrap align-top">19-24 Oct</td>
+<td class="py-3.5 px-3 align-top">
+<span class="font-medium text-obsidian block text-[14px]">Impuesto sobre Estancias en Alojamientos Turísticos</span>
+<span class="text-warm-slate text-[12px]">Tasa legal obligatoria: 4,00 € por noche y huésped (5 n x 2 p)</span>
+</td>
+<td class="py-3.5 px-2 text-center align-top font-medium text-obsidian">10</td>
+<td class="py-3.5 px-3 text-right align-top font-mono text-[13px] text-obsidian">4,00 €</td>
+<td class="py-3.5 px-2 text-center align-top text-warm-slate">0%</td>
+<td class="py-3.5 px-3 text-right align-top font-mono text-[13px] text-obsidian">40,00 €</td>
+<td class="py-3.5 px-2 text-center align-top"><span class="px-1.5 py-0.5 rounded bg-surface-container text-warm-slate font-mono text-[11px] border border-outline-variant/60">Exento</span></td>
+<td class="py-3.5 px-3 text-right align-top font-medium text-obsidian font-mono text-[14px]">40,00 €</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Financial Totals & Tax Table Split -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6 mt-6 pt-4 border-t border-outline-variant">
+<!-- Tax Breakdown Matrix (Left 7 cols) -->
+<div class="md:col-span-7 space-y-3">
+<span class="font-label-caps text-[10px] uppercase tracking-wider text-warm-slate font-semibold">Desglose Tributario (Régimen General)</span>
+<div class="rounded-xl overflow-hidden border border-outline-variant bg-surface-container-lowest">
+<table class="w-full text-left text-[12px]">
+<thead>
+<tr class="bg-surface-container-low text-warm-slate font-label-caps text-[10px] uppercase border-b border-outline-variant">
+<th class="py-2.5 px-3">Régimen / Tipo</th>
+<th class="py-2.5 px-3 text-right">Base Imponible</th>
+<th class="py-2.5 px-3 text-right">Cuota Impuesto</th>
+<th class="py-2.5 px-3 text-right">Total Tramo</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant">
+<tr>
+<td class="py-2.5 px-3 text-obsidian font-medium">IVA Reducido Hostelería (10%)</td>
+<td class="py-2.5 px-3 text-right text-warm-slate font-mono">1.730,00 €</td>
+<td class="py-2.5 px-3 text-right text-obsidian font-mono">173,00 €</td>
+<td class="py-2.5 px-3 text-right text-obsidian font-mono font-semibold">1.903,00 €</td>
+</tr>
+<tr>
+<td class="py-2.5 px-3 text-obsidian font-medium">IVA General Servicios (21%)</td>
+<td class="py-2.5 px-3 text-right text-warm-slate font-mono">230,00 €</td>
+<td class="py-2.5 px-3 text-right text-obsidian font-mono">48,30 €</td>
+<td class="py-2.5 px-3 text-right text-obsidian font-mono font-semibold">278,30 €</td>
+</tr>
+<tr>
+<td class="py-2.5 px-3 text-warm-slate">Tasa Turística / Exento (0%)</td>
+<td class="py-2.5 px-3 text-right text-warm-slate font-mono">40,00 €</td>
+<td class="py-2.5 px-3 text-right text-warm-slate/70 font-mono">0,00 €</td>
+<td class="py-2.5 px-3 text-right text-obsidian font-mono font-semibold">40,00 €</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Payment Confirmation Note -->
+<div class="p-3.5 bg-surface-container-low/70 border border-outline-variant/80 rounded-xl flex items-center justify-between gap-3 text-warm-slate font-body-sm text-body-sm">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-xl text-sage-status">credit_card</span>
+<div>
+<p class="font-medium text-obsidian">Cobro Concluído: Visa Corp **** 4821</p>
+<p class="text-[12px] text-warm-slate">Liquidación ID: TX-78192 · Terminal POS 02-FrontDesk</p>
+</div>
+</div>
+<div class="text-right">
+<span class="font-label-caps text-[10px] text-sage-status uppercase tracking-wider block font-semibold">Saldo Pendiente</span>
+<span class="font-headline-sm text-headline-sm text-sage-status font-mono font-semibold">0,00 €</span>
+</div>
+</div>
+</div>
+<!-- Final Aggregate Totals (Right 5 cols) -->
+<div class="md:col-span-5 bg-surface-container-low/70 border border-outline-variant/80 rounded-xl p-5 flex flex-col justify-between">
+<div class="space-y-2.5 text-warm-slate font-body-sm text-body-sm">
+<div class="flex justify-between items-center">
+<span>Base Imponible Neta:</span>
+<span class="font-mono text-[14px] text-obsidian font-medium">2.000,00 €</span>
+</div>
+<div class="flex justify-between items-center">
+<span>Total IVA Repercutido:</span>
+<span class="font-mono text-[14px] text-obsidian font-medium">221,30 €</span>
+</div>
+<div class="flex justify-between items-center">
+<span>Tasas Turísticas Exentas:</span>
+<span class="font-mono text-[14px] text-obsidian font-medium">40,00 €</span>
+</div>
+<div class="flex justify-between items-center text-warm-slate/70 text-[12px]">
+<span>Descuentos y Bonificaciones:</span>
+<span class="font-mono">0,00 €</span>
+</div>
+</div>
+<div class="pt-4 mt-4 border-t border-outline-variant">
+<div class="flex justify-between items-baseline">
+<span class="font-label-caps text-[11px] uppercase tracking-widest text-warm-slate font-bold">TOTAL FACTURA</span>
+<div class="text-right">
+<span class="font-headline-lg text-[28px] text-obsidian font-bold tracking-tight">2.261,30 €</span>
+<span class="block text-[11px] text-warm-slate mt-0.5">Impuestos incluidos según legislación vigente</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Official Veri*Factu Seal & Legal Regulatory Footer -->
+<div class="mt-8 pt-6 border-t border-outline-variant grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
+<!-- Official QR Code representation -->
+<div class="md:col-span-3 flex flex-col items-center sm:items-start">
+<div class="p-2 bg-surface-container-lowest border border-outline-variant rounded-lg shadow-sm">
+<!-- Geometric SVG representing official Veri*Factu QR -->
+<svg class="w-24 h-24 text-obsidian" fill="currentColor" viewbox="0 0 100 100">
+<path d="M0 0h32v32H0zM6 6h20v20H6zm4 4h12v12H10zm58-10h32v32H68zM74 6h20v20H74zm4 4h12v12H78zM0 68h32v32H0zm6 6h20v20H6zm4 4h12v12H10zm40-74h12v12H50zm-10 18h10v10H40zm20 0h12v10H60zm-30 8h8v16h-8zm18 6h12v8H48zm18 0h16v6H66zm16 10h18v16H82zm-22 10h14v8H60zm-20 8h10v12H40zm16 8h16v14H56zm28 0h16v16H84zm-44 8h12v8H40z"></path>
+</svg>
+</div>
+<span class="text-[10px] text-warm-slate uppercase tracking-wider mt-1.5 font-label-caps text-center sm:text-left font-semibold">
+              Veri*Factu AEAT · Ley 11/2021
+            </span>
+</div>
+<!-- Blockchain Ledger & Security Footprint -->
+<div class="md:col-span-9 space-y-2">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-base">verified</span>
+<span class="font-label-caps text-[11px] uppercase tracking-wide text-obsidian font-bold">Comprobante con Huella Digital Criptográfica Encadenada</span>
+</div>
+<p class="font-mono text-[10px] text-warm-slate leading-tight break-all">
+              SHA256: 8f492b6a9c118471e4cb8008d519ac29031efaa026d36ef581dc4177d85c49b0 | Firma: CERT-FNMT-948102-AQELION-2024
+            </p>
+<p class="font-body-sm text-body-sm text-[11px] text-warm-slate leading-relaxed">
+              AQELION HOSPITALITY SUITES S.L., de conformidad con el RGPD (UE) 2016/679, trata sus datos para la prestación del servicio de alojamiento y cumplimiento de obligaciones fiscales y contables. Dispone de derechos de acceso, rectificación y supresión enviando un correo a dpo@aqelion-miramar.com. Este documento electrónico tiene plena validez fiscal y mercantil conforme al RD 1619/2012.
+            </p>
+</div>
+</div>
+</div>
+</div>
+<!-- Audit Sidebar & Fiscal Traceability Panel (4 Cols Desktop - Non Print) -->
+<div class="xl:col-span-4 no-print space-y-space-md w-full">
+<!-- Quick Status Card -->
+<div class="bg-surface-container-lowest border border-outline-variant/80 rounded-xl p-space-md shadow-[0_2px_12px_rgba(25,24,22,0.03)]">
+<div class="flex items-center justify-between pb-space-sm mb-space-sm border-b border-outline-variant">
+<span class="font-label-caps text-[10px] uppercase tracking-wider text-warm-slate font-semibold">Estado en la Agencia Tributaria</span>
+<span class="material-symbols-outlined text-sage-status text-xl">cloud_done</span>
+</div>
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-full bg-sage-status-bg border border-sage-status/20 flex items-center justify-center text-sage-status">
+<span class="material-symbols-outlined text-lg">check</span>
+</div>
+<div>
+<span class="font-headline-sm text-[16px] font-semibold text-obsidian block leading-tight">Transmitida con Éxito</span>
+<span class="font-body-sm text-[12px] text-warm-slate">Entrada Registro SII: #SII-20241024-00918</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-2 mt-4 pt-3 border-t border-outline-variant text-[12px]">
+<div>
+<span class="text-warm-slate/80 block text-[11px]">Latencia respuesta:</span>
+<span class="font-mono text-obsidian font-semibold">142 ms</span>
+</div>
+<div>
+<span class="text-warm-slate/80 block text-[11px]">Certificado:</span>
+<span class="text-obsidian font-medium">AC FNMT Usuarios</span>
+</div>
+</div>
+</div>
+<!-- Historical Event Timeline Card -->
+<div class="bg-surface-container-lowest border border-outline-variant/80 rounded-xl p-space-md shadow-[0_2px_12px_rgba(25,24,22,0.03)]">
+<span class="font-label-caps text-[10px] uppercase tracking-wider text-warm-slate font-semibold block mb-space-md">Historial de Eventos del Documento</span>
+<div class="relative pl-5 space-y-4 before:absolute before:left-2 before:top-2 before:bottom-2 before:w-0.5 before:bg-outline-variant">
+<!-- Event 1 -->
+<div class="relative">
+<span class="absolute -left-5 top-1 w-2.5 h-2.5 rounded-full bg-sage-status ring-4 ring-surface-container-lowest"></span>
+<div class="flex flex-col">
+<span class="font-medium text-obsidian text-[13px]">Verificación Veri*Factu SII Aceptada</span>
+<span class="text-[11px] text-warm-slate">Hoy, 10:31:04 · Servidor AEAT Producción</span>
+</div>
+</div>
+<!-- Event 2 -->
+<div class="relative">
+<span class="absolute -left-5 top-1 w-2.5 h-2.5 rounded-full bg-secondary ring-4 ring-surface-container-lowest"></span>
+<div class="flex flex-col">
+<span class="font-medium text-obsidian text-[13px]">Factura Generada &amp; Firmada Digitalmente</span>
+<span class="text-[11px] text-warm-slate">Hoy, 10:30:12 · Por Alejandro Morales (Recepción)</span>
+</div>
+</div>
+<!-- Event 3 -->
+<div class="relative">
+<span class="absolute -left-5 top-1 w-2.5 h-2.5 rounded-full bg-obsidian ring-4 ring-surface-container-lowest"></span>
+<div class="flex flex-col">
+<span class="font-medium text-obsidian text-[13px]">Cobro Total Asentado Folio #FOL-2024-0310</span>
+<span class="text-[11px] text-warm-slate">Hoy, 09:15:20 · TPVM Visa Corp (2.261,30 €)</span>
+</div>
+</div>
+<!-- Event 4 -->
+<div class="relative">
+<span class="absolute -left-5 top-1 w-2.5 h-2.5 rounded-full bg-outline-variant ring-4 ring-surface-container-lowest"></span>
+<div class="flex flex-col">
+<span class="font-medium text-warm-slate text-[13px]">Check-out Efectuado Hab. 402</span>
+<span class="text-[11px] text-warm-slate/70">Hoy, 09:05:00 · Llaves electrónicas devueltas</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Email Delivery Status Card -->
+<div class="bg-surface-container-lowest border border-outline-variant/80 rounded-xl p-space-md shadow-[0_2px_12px_rgba(25,24,22,0.03)]">
+<div class="flex items-center justify-between mb-3">
+<span class="font-label-caps text-[10px] uppercase tracking-wider text-warm-slate font-semibold">Envío Telemático</span>
+<span class="px-2 py-0.5 rounded bg-sage-status-bg text-sage-status border border-sage-status/20 font-label-caps text-[10px] font-semibold">Entregado</span>
+</div>
+<p class="font-body-sm text-body-sm text-obsidian">Copia en formato PDF y Facturae XML enviada a:</p>
+<div class="mt-2 p-2.5 bg-surface-container-low border border-outline-variant/70 rounded-lg flex items-center justify-between">
+<span class="font-mono text-[12px] text-obsidian truncate">facturacion@grandtravel.com</span>
+<span class="material-symbols-outlined text-base text-sage-status">done_all</span>
+</div>
+<p class="text-[11px] text-warm-slate mt-1.5">Abierto por el destinatario a las 10:44 hrs</p>
+<button class="w-full mt-3 h-8 rounded-lg border border-outline-variant bg-surface-container-low hover:bg-surface-container text-obsidian font-body-md text-[13px] transition-colors flex items-center justify-center gap-1.5 cursor-pointer">
+<span class="material-symbols-outlined text-base text-warm-slate">forward_to_inbox</span>
+<span>Reenviar a otro correo</span>
+</button>
+</div>
+<!-- Quick Context Info (Hotel Room Photo Preview) -->
+<div class="bg-surface-container-lowest border border-outline-variant/80 rounded-xl p-space-md shadow-[0_2px_12px_rgba(25,24,22,0.03)] space-y-3">
+<span class="font-label-caps text-[10px] uppercase tracking-wider text-warm-slate font-semibold block">Referencia Habitacional</span>
+<div class="relative w-full h-32 rounded-lg overflow-hidden border border-outline-variant">
+<img class="w-full h-full object-cover" data-alt="Luxurious presidential hotel suite with ocean view balcony, plush king bed, marble floors, modern minimalist design with subtle navy and golden hues in bright daylight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxO21Ow8f0JHu6cDb8vtasKf5cytZzZu3btGT3pl5dMPmRo9-bs2ZMOJg2q79ClkWyNQxlmWPAjJfP9As2jr3iXWTopNV6B82Ff5fgHeQv4HuwUBs_IBq2r1a7N6whKVLC9NsfepLDKGeGHIAatNFYJp8ig2xmvKYah5UoMZHfh2ph2URHPuMXrkDYM6neqnEvYtcNe0jWCcZt4acaBVjmsExaMwETHpsiBcZijEtQ4sel-0tMyGqsjQ"/>
+<div class="absolute bottom-2 left-2 px-2.5 py-1 rounded bg-obsidian/85 backdrop-blur-sm text-on-primary font-body-sm text-[11px] font-medium border border-champagne/30">
+            Habitación 402 · Suite Presidencial
+          </div>
+</div>
+<div class="flex items-center justify-between text-warm-slate font-body-sm text-body-sm">
+<span>Servicio de Limpieza:</span>
+<span class="text-sage-status font-medium flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-sage-status"></span>Revisada / Disponible</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Interactive Dropdown & Action Scripts -->
+<script>
+    (function() {
+      const toggleBtn = document.getElementById('dropdownToggleBtn');
+      const menu = document.getElementById('moreActionsDropdown')?.querySelector('#dropdownMenu');
+
+      if (toggleBtn && menu) {
+        toggleBtn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          menu.classList.toggle('hidden');
+        });
+
+        document.addEventListener('click', () => {
+          if (!menu.classList.contains('hidden')) {
+            menu.classList.add('hidden');
+          }
+        });
+      }
+
+      // Download PDF Simulation notification
+      const downloadBtn = document.getElementById('downloadPdfBtn');
+      if (downloadBtn) {
+        downloadBtn.addEventListener('click', () => {
+          const originalText = downloadBtn.innerHTML;
+          downloadBtn.innerHTML = '<span class="material-symbols-outlined text-base animate-spin text-champagne">refresh</span><span>Generando...</span>';
+          setTimeout(() => {
+            window.print();
+            downloadBtn.innerHTML = originalText;
+          }, 450);
+        });
+      }
+    })();
+  </script>
+</div></main></div></body></html>

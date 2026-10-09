@@ -1,5 +1,6 @@
 package com.api.staybill.model;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
 
 @Entity
@@ -15,6 +16,8 @@ public class Usuario {
     @Column(unique = true, nullable = false)
     private String correo_usu;
     
+    // Se recibe en el registro, pero nunca se devuelve en el JSON
+    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private String pass_usu;
     private String rol_usu = "USER";
     private Boolean estado_usu = true;

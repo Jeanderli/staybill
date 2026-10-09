@@ -1,0 +1,11 @@
+# Dependencias y compilados
+node_modules/
+dist/
+target/
+
+# Variables de entorno (usar .env.example)
+.env
+
+# Editores
+.vs/
+.idea/

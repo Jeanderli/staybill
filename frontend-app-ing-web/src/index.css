@@ -1,0 +1,219 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/forms";
+
+/* Tema generado desde los diseños de Google Stitch (proyecto AQELION) */
+@theme {
+  /* Colores */
+  --color-on-primary-fixed-variant: #484644;
+  --color-secondary: #755a34;
+  --color-surface-bright: #fbf9f6;
+  --color-surface-variant: #e4e2df;
+  --color-on-secondary: #ffffff;
+  --color-on-primary-fixed: #1c1b19;
+  --color-on-surface-variant: #635f58;
+  --color-inverse-primary: #cac6c2;
+  --color-secondary-fixed: #ffddb3;
+  --color-on-tertiary-container: #2f5c44;
+  --color-on-secondary-fixed-variant: #5b421f;
+  --color-tertiary-container: #eef5f0;
+  --color-error-container: #ffdad6;
+  --color-surface-container-low: #f5f3f0;
+  --color-primary-container: #1c1b19;
+  --color-tertiary: #2e5641;
+  --color-on-secondary-fixed: #291800;
+  --color-tertiary-fixed-dim: #ccc6bb;
+  --color-on-error-container: #93000a;
+  --color-on-error: #ffffff;
+  --color-surface-dim: #dbdad7;
+  --color-surface-tint: #605e5b;
+  --color-on-tertiary: #ffffff;
+  --color-outline-variant: #eae5dc;
+  --color-surface-container-high: #eae8e5;
+  --color-inverse-on-surface: #f2f0ed;
+  --color-surface-container: #efeeeb;
+  --color-on-tertiary-fixed-variant: #4a463e;
+  --color-on-secondary-container: #7a5e38;
+  --color-error: #b44a4a;
+  --color-background: #fbf9f6;
+  --color-on-surface: #1c1b19;
+  --color-inverse-surface: #30312f;
+  --color-outline: #8a867e;
+  --color-primary: #191816;
+  --color-surface-container-lowest: #ffffff;
+  --color-tertiary-fixed: #e9e1d6;
+  --color-surface-container-highest: #e8e3da;
+  --color-on-primary-container: #9e9a93;
+  --color-on-primary: #ffffff;
+  --color-primary-fixed: #e6e2de;
+  --color-on-background: #1c1b19;
+  --color-primary-fixed-dim: #cac6c2;
+  --color-on-tertiary-fixed: #1e1b15;
+  --color-secondary-fixed-dim: #e5c193;
+  --color-surface: #fbf9f6;
+  --color-secondary-container: #f6ebd8;
+  --color-bronze-accent: #a37f4e;
+  --color-bronze-light: #f4ede2;
+  --color-cognac: #b46e28;
+  --color-cognac-light: #fdf4ea;
+  --color-sage: #3b6e52;
+  --color-sage-light: #eff6f1;
+  --color-gold-accent: #c5a880;
+  --color-gold-accent-light: #f4eedf;
+  --color-olive-tag: #3b6e52;
+  --color-amber-tag: #b46e28;
+  --color-secondary-hover: #634c2a;
+  --color-obsidian: #191816;
+  --color-warm-slate: #5A554E;
+  --color-sage-status: #3B6E52;
+  --color-sage-status-bg: #edf5f0;
+  --color-champagne: #c5a880;
+  --color-stone-border: #E7E1D7;
+  --color-warm-sand: #F3EFEA;
+  --color-champagne-light: #F7F3EC;
+  --color-champagne-dark: #8F7049;
+  --color-cognac-soft: #FBF1E6;
+  --color-olive-sage: #3B6E52;
+  --color-olive-sage-soft: #EDF5F0;
+
+  /* Tipografías */
+  --font-body-sm: Manrope, sans-serif;
+  --font-numeric-lg: Manrope, sans-serif;
+  --font-headline-lg: "Playfair Display", serif;
+  --font-label-sm: Manrope, sans-serif;
+  --font-headline-md: "Playfair Display", serif;
+  --font-body-md: Manrope, sans-serif;
+  --font-display-lg: "Playfair Display", serif;
+  --font-numeric-md: Manrope, sans-serif;
+  --font-display-lg-mobile: "Playfair Display", serif;
+  --font-headline-sm: Manrope, sans-serif;
+  --font-body-lg: Manrope, sans-serif;
+  --font-label-caps: Manrope, sans-serif;
+  --font-label-md: Manrope, sans-serif;
+  --font-currency-display: Manrope, sans-serif;
+  --font-currency-table: Manrope, sans-serif;
+  --font-headline-lg-mobile: "Playfair Display", serif;
+  --font-display: "Playfair Display", serif;
+  --font-body: Manrope, sans-serif;
+
+  /* Tamaños de texto */
+  --text-body-sm: 12px;
+  --text-body-sm--line-height: 18px;
+  --text-body-sm--letter-spacing: 0.01em;
+  --text-body-sm--font-weight: 400;
+  --text-numeric-lg: 28px;
+  --text-numeric-lg--line-height: 36px;
+  --text-numeric-lg--letter-spacing: -0.02em;
+  --text-numeric-lg--font-weight: 500;
+  --text-headline-lg: 30px;
+  --text-headline-lg--line-height: 38px;
+  --text-headline-lg--letter-spacing: -0.015em;
+  --text-headline-lg--font-weight: 600;
+  --text-label-sm: 11px;
+  --text-label-sm--line-height: 15px;
+  --text-label-sm--letter-spacing: 0.05em;
+  --text-label-sm--font-weight: 600;
+  --text-label-md: 13px;
+  --text-label-md--line-height: 18px;
+  --text-label-md--letter-spacing: 0.01em;
+  --text-label-md--font-weight: 500;
+  --text-headline-md: 22px;
+  --text-headline-md--line-height: 30px;
+  --text-headline-md--font-weight: 600;
+  --text-body-md: 14px;
+  --text-body-md--line-height: 22px;
+  --text-body-md--letter-spacing: 0.005em;
+  --text-body-md--font-weight: 400;
+  --text-display-lg: 44px;
+  --text-display-lg--line-height: 52px;
+  --text-display-lg--letter-spacing: -0.02em;
+  --text-display-lg--font-weight: 500;
+  --text-numeric-md: 15px;
+  --text-numeric-md--line-height: 20px;
+  --text-numeric-md--letter-spacing: 0.02em;
+  --text-numeric-md--font-weight: 600;
+  --text-headline-sm: 16px;
+  --text-headline-sm--line-height: 24px;
+  --text-headline-sm--letter-spacing: 0.005em;
+  --text-headline-sm--font-weight: 600;
+  --text-body-lg: 16px;
+  --text-body-lg--line-height: 26px;
+  --text-body-lg--letter-spacing: 0;
+  --text-body-lg--font-weight: 400;
+  --text-currency-display: 28px;
+  --text-currency-display--line-height: 34px;
+  --text-currency-display--letter-spacing: -0.02em;
+  --text-currency-display--font-weight: 600;
+  --text-currency-table: 14px;
+  --text-currency-table--line-height: 20px;
+  --text-currency-table--letter-spacing: 0.01em;
+  --text-currency-table--font-weight: 600;
+  --text-display-lg-mobile: 34px;
+  --text-display-lg-mobile--line-height: 42px;
+  --text-display-lg-mobile--letter-spacing: -0.01em;
+  --text-display-lg-mobile--font-weight: 400;
+  --text-label-caps: 11px;
+  --text-label-caps--line-height: 16px;
+  --text-label-caps--letter-spacing: 0.14em;
+  --text-label-caps--font-weight: 700;
+  --text-headline-lg-mobile: 26px;
+  --text-headline-lg-mobile--line-height: 34px;
+  --text-headline-lg-mobile--letter-spacing: -0.01em;
+  --text-headline-lg-mobile--font-weight: 500;
+
+  /* Espaciados */
+  --spacing-space-sm: 0.5rem;
+  --spacing-space-md: 1rem;
+  --spacing-margin-mobile: 1.25rem;
+  --spacing-space-xs: 0.25rem;
+  --spacing-margin: 3rem;
+  --spacing-gutter-mobile: 0.75rem;
+  --spacing-space-xl: 2.5rem;
+  --spacing-space-lg: 1.75rem;
+  --spacing-gutter: 1.5rem;
+
+  /* Bordes */
+  --radius-lg: 0.25rem;
+  --radius-xl: 0.5rem;
+  --radius-2xl: 0.75rem;
+}
+
+@layer base {
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    @apply bg-background font-body-md text-body-md text-on-surface antialiased;
+    overscroll-behavior: none;
+  }
+}
+
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+}
+
+/* Impresión de la factura (pantalla Detalle de Factura) */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  #print-area,
+  #print-area * {
+    visibility: visible;
+  }
+  #print-area {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    box-shadow: none !important;
+    background: #ffffff !important;
+    border: none !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+}
